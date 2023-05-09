@@ -1,33 +1,37 @@
 from Arithmetic import Arithmetic
 
-class user():
-    print("Welcome to the Arithmetic Class calculator!\n"
-          "Please choose the operation you want to perform:\n"
-          "1. Add\n"
-          "2. Subtract\n"
-          "3. Multiply\n"
-          "4. Divide")
-    choice = int(input("Enter your choice (1/2/3/4): "))
 
-    if choice == 1:
-        a = int(input("Enter the first number: "))
-        b = int(input("Enter the second number: "))
-        print("Result: ", Arithmetic.addition(a, b))
+class User():
+    def run_user(self):
+        print("Welcome to the Arithmetic Class calculator!\n"
+              "Please choose the operation you want to perform:\n"
+              "1. Add\n"
+              "2. Subtract\n"
+              "3. Multiply\n"
+              "4. Divide")
 
-    elif choice == 2:
-        a = int(input("Enter the first number: "))
-        b = int(input("Enter the second number: "))
-        print("Result: ", Arithmetic.subtraction(a, b))
+        choice = int(input("Enter your choice (1/2/3/4): "))
+        value_input = input(
+            'Enter operation values separated by spaces: ').split(' ')
 
-    elif choice == 3:
-        a = int(input("Enter the first number: "))
-        b = int(input("Enter the second number: "))
-        print("Result: ", Arithmetic.multiplication(a, b))
+        # converte valores para int
+        value_input = [int(x) for x in value_input]
 
-    elif choice == 4:
-        a = int(input("Enter the first number: "))
-        b = int(input("Enter the second number: "))
-        print("Result: ", Arithmetic.division(a, b))
+        if choice == 1:
+            result = Arithmetic.addition(*value_input)
+            print("Result:", result)
 
-    else:
-        print("Invalid choice. Please try again.")
+        elif choice == 2:
+            result = Arithmetic.subtraction(*value_input)
+            print("Result:", result)
+
+        elif choice == 3:
+            result = Arithmetic.multiplication(*value_input)
+            print("Result:", result)
+
+        elif choice == 4:
+            result = Arithmetic.division(*value_input)
+            print("Result:", result)
+
+        else:
+            print("Invalid choice. Please try again.")
