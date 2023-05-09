@@ -5,28 +5,10 @@
 
 # CALCULATOR
 
-Aplicação completa de gerenciamento de evento e criação de evento.
-O usuário poderá se cadastrar e o criador do evento consiguirá emitir certificados através da aplicação.
-
-
-## Installation
-
-Install my-project with pip
+A calculator for basic math operations, using the terminal, entirely made with Python without the use of libraries.
 
 ```bash
-  git clone https://github.com/alves-py/Type_event.git
-  cd Type_event
-  pip install django & pip instal pillow
-```
-## Run my project
-
-```bash
-    python manage.py runserver
-```
-## Path to register page
-
-```bash
-    http://127.0.0.1:8000/usuarios/cadastro/
+    start Calculator/main.py
 ```
 
 ## Authors
